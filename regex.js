@@ -1,4 +1,3 @@
-// Sample strings to test
 let myStrings = [
     "user@example.com",
     "firstname.lastname@company.co.uk",
@@ -17,38 +16,39 @@ let myStrings = [
     "#example",
     "#ThisIsAHashtag",
     "$19.99",
-    "$1,234.56"
+    "$1,234.56",
+    "hello world  #with spaces",
+    "invalid email@domain",
+    "https://example.com/?query=abc#fragment"
 ];
 
-// Regular Expressions
-let email = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
-let url = /https?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}[^\s"]*/g;
-let creditCard = /\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g;
-let phone = /\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/g;
-let time = /(?:\b([01]?\d|2[0-3]):([0-5]\d)\b|\b(1?[0-2]):([0-5]\d)\s?(AM|PM)\b)/gi;
-let htmlTag = /<[^>]+>/g;
+// Updated Regular Expressions
+let email = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(?!\s)/g;
+let url = /https?:\/\/(?:[a-zA-Z0-9.-]+)(?:\/[^\s]*)?/g;
+let creditCard = /\b(?:\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}|\d{16})\b/g;
+let phone = /\(?\+?\d{1,4}?\)?[\s.-]?\(?\d{1,4}?\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}/g;
+let time = /(?:\b([01]?\d|2[0-3]):([0-5]\d)\b|\b(1?[0-2]):([0-5]\d)\s?(AM|PM)\b)(?!\s)/gi;
+let htmlTag = /<([a-zA-Z][a-zA-Z0-9]*)([^>]*)(?<!\/)>/g;
 let hashtag = /#[A-Za-z0-9_]+/g;
-let currency = /\$\d{1,3}(?:,\d{3})*(\.\d{2})?/g;
+let currency = /\$\s?\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g;
 
-// Extract matches
-let matches = {
-    emails: myStrings.filter(str => str.match(email)),
-    urls: myStrings.filter(str => str.match(url)),
-    creditCards: myStrings.filter(str => str.match(creditCard)),
-    phoneNumbers: myStrings.filter(str => str.match(phone)),
-    times: myStrings.filter(str => str.match(time)),
-    htmlTags: myStrings.filter(str => str.match(htmlTag)),
-    hashtags: myStrings.filter(str => str.match(hashtag)),
-    currency: myStrings.filter(str => str.match(currency))
-};
+// Separate matches into their own arrays
+let emails = myStrings.filter(str => str.match(email));
+let urls = myStrings.filter(str => str.match(url));
+let creditCards = myStrings.filter(str => str.match(creditCard));
+let phoneNumbers = myStrings.filter(str => str.match(phone));
+let times = myStrings.filter(str => str.match(time));
+let htmlTags = myStrings.filter(str => str.match(htmlTag));
+let hashtags = myStrings.filter(str => str.match(hashtag));
+let currencyAmounts = myStrings.filter(str => str.match(currency));
 
 // Run tests
-console.log("Testing Regular Expressions:");
-console.log("Emails:", matches.emails);
-console.log("URLs:", matches.urls);
-console.log("Credit Card Numbers:", matches.creditCards);
-console.log("Phone Numbers:", matches.phoneNumbers);
-console.log("Times:", matches.times);
-console.log("HTML Tags:", matches.htmlTags);
-console.log("Hashtags:", matches.hashtags);
-console.log("Currency:", matches.currency);
+console.log("Testing Regular Expressions with Edge Case Handling:");
+console.log("Emails:", emails);
+console.log("URLs:", urls);
+console.log("Credit Card Numbers:", creditCards);
+console.log("Phone Numbers:", phoneNumbers);
+console.log("Times:", times);
+console.log("HTML Tags:", htmlTags);
+console.log("Hashtags:", hashtags);
+console.log("Currency:", currencyAmounts);
