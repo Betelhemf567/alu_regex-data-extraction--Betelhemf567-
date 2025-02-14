@@ -41,7 +41,7 @@ git clone https://github.com/{YourUsername}/alu_regex-data-extraction-{YourUsern
 ```
 
 ### 2. **Edit the Code**
-Open the JavaScript file (`regexExtractor.js`) and modify the `myStrings` array to include any test strings you want to extract data from.
+Open the JavaScript file (`regex.js`) and modify the `myStrings` array to include any test strings you want to extract data from.
 
 ### 3. **Run the Code**
 The code can be executed in a JavaScript environment such as:
