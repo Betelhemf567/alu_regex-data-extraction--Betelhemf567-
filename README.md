@@ -21,7 +21,7 @@ The solution processes input strings, extracts relevant data using regex, and ou
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/your-username/data-extraction-web-app.git
-2. Open the project folder and edit the script.js file as needed.
+2. Open the project folder and edit the regex.js file as needed.
 
 3. Run the script directly in your browser's developer console or execute it through an HTML file.
 
