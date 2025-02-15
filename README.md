@@ -23,8 +23,10 @@ The solution processes input strings, extracts relevant data using regex, and ou
    git clone https://github.com/your-username/data-extraction-web-app.git
 2. Navigate to the project folder:
    cd alu_regex-data-extraction--Betelhemf567-
-3. Open regex.js in your text editor and modify the testStrings array as needed with your data.
-4. Run the script directly in your browser's developer console or on the termminal using node regex.js
+
+ 
+4. Open regex.js in your text editor and modify the testStrings array as needed with your data.
+5. Run the script directly in your browser's developer console or on the termminal using node regex.js
    node regex.js
 6. View the extracted data in the console.
 ## Technologies Used
