@@ -23,7 +23,7 @@ The solution processes input strings, extracts relevant data using regex, and ou
    git clone https://github.com/your-username/data-extraction-web-app.git
 2. Open the project folder and edit the regex.js file as needed.
 
-3. Run the script directly in your browser's developer console or execute it through an HTML file.
+3. Run the script directly in your browser's developer console or on the termminal using node regex.js
 
 4. View the extracted data in the console.
 ## Technologies Used
