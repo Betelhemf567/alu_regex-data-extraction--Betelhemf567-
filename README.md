@@ -21,7 +21,7 @@ The solution processes input strings, extracts relevant data using regex, and ou
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/data-extraction-web-app.git
+   git clone https://github.com/Betelhemf567/alu_regex-data-extraction--Betelhemf567-.git
    ```
 
 2. Navigate to the project folder:
