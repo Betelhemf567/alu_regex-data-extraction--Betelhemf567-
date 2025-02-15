@@ -21,15 +21,23 @@ The solution processes input strings, extracts relevant data using regex, and ou
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/your-username/data-extraction-web-app.git
-2. Open the project folder and edit the regex.js file as needed.
-
-3. Run the script directly in your browser's developer console or on the termminal using node regex.js
-
-4. View the extracted data in the console.
+2. Navigate to the project folder:
+   cd alu_regex-data-extraction--Betelhemf567-
+3. Open regex.js in your text editor and modify the testStrings array as needed with your data.
+4. Run the script directly in your browser's developer console or on the termminal using node regex.js
+   node regex.js
+6. View the extracted data in the console.
 ## Technologies Used
 - JavaScript for regex data extraction.
- ## Acknowledgments
-Thanks to the open-source community for Regex contributions and best practices.
+## Edge Case Handling
+The regex patterns are designed to handle common edge cases like:
+- Malformed email addresses.
+- Multiple formats of credit card numbers (e.g., with spaces or dashes).
+- Variations in currency formats, including thousands separators and decimal places.
+## License
+This project is licensed under the MIT License.
+
+
 
 
 
